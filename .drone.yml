@@ -1,0 +1,8 @@
+pipeline:
+  build:
+    image: python:alpine
+    commands:
+      - pip install pep8
+      - pip install pyflakes
+      - pep8 webserver.py
+      - pyflakes webserver.py
