@@ -6,3 +6,13 @@ pipeline:
       - pip install pyflakes
       - pep8 webserver.py
       - pyflakes webserver.py
+
+  notify:
+  email:
+    from: noreply@github.com
+    host: smtp.mailgun.org
+    port: 587
+    username: octocat
+    password: 12345
+    recipients:
+      - jgunnarsson@gmail.com
